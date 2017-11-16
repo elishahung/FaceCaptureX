@@ -1,0 +1,581 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		903DD17E1FBDCB020041E5D9 /* record.png in Resources */ = {isa = PBXBuildFile; fileRef = 903DD17D1FBDCB020041E5D9 /* record.png */; };
+		90A852771FB856630089852C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A852761FB856630089852C /* AppDelegate.swift */; };
+		90A852791FB856630089852C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A852781FB856630089852C /* ViewController.swift */; };
+		90A8527C1FB856630089852C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90A8527A1FB856630089852C /* Main.storyboard */; };
+		90A8527E1FB856630089852C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90A8527D1FB856630089852C /* Assets.xcassets */; };
+		90A852811FB856630089852C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90A8527F1FB856630089852C /* LaunchScreen.storyboard */; };
+		90A8528C1FB856630089852C /* FaceDataRecorderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A8528B1FB856630089852C /* FaceDataRecorderTests.swift */; };
+		90A852971FB856630089852C /* FaceDataRecorderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A852961FB856630089852C /* FaceDataRecorderUITests.swift */; };
+		90F6065D1FB9D6B300BD5824 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F6065C1FB9D6B300BD5824 /* Extensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		90A852881FB856630089852C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90A8526B1FB856630089852C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90A852721FB856630089852C;
+			remoteInfo = FaceDataRecorder;
+		};
+		90A852931FB856630089852C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90A8526B1FB856630089852C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90A852721FB856630089852C;
+			remoteInfo = FaceDataRecorder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		903DD17D1FBDCB020041E5D9 /* record.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = record.png; sourceTree = "<group>"; };
+		90A852731FB856630089852C /* FaceDataRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceDataRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		90A852761FB856630089852C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		90A852781FB856630089852C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		90A8527B1FB856630089852C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		90A8527D1FB856630089852C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		90A852801FB856630089852C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		90A852821FB856630089852C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90A852871FB856630089852C /* FaceDataRecorderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceDataRecorderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		90A8528B1FB856630089852C /* FaceDataRecorderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDataRecorderTests.swift; sourceTree = "<group>"; };
+		90A8528D1FB856630089852C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90A852921FB856630089852C /* FaceDataRecorderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceDataRecorderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		90A852961FB856630089852C /* FaceDataRecorderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDataRecorderUITests.swift; sourceTree = "<group>"; };
+		90A852981FB856630089852C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90F6065C1FB9D6B300BD5824 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		90A852701FB856630089852C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90A852841FB856630089852C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90A8528F1FB856630089852C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		903DD17F1FBDE57D0041E5D9 /* sources */ = {
+			isa = PBXGroup;
+			children = (
+				90A8527F1FB856630089852C /* LaunchScreen.storyboard */,
+				90A8527D1FB856630089852C /* Assets.xcassets */,
+				90A852761FB856630089852C /* AppDelegate.swift */,
+			);
+			path = sources;
+			sourceTree = "<group>";
+		};
+		90A8526A1FB856630089852C = {
+			isa = PBXGroup;
+			children = (
+				90A852751FB856630089852C /* FaceDataRecorder */,
+				90A8528A1FB856630089852C /* FaceDataRecorderTests */,
+				90A852951FB856630089852C /* FaceDataRecorderUITests */,
+				90A852741FB856630089852C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		90A852741FB856630089852C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				90A852731FB856630089852C /* FaceDataRecorder.app */,
+				90A852871FB856630089852C /* FaceDataRecorderTests.xctest */,
+				90A852921FB856630089852C /* FaceDataRecorderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		90A852751FB856630089852C /* FaceDataRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				903DD17F1FBDE57D0041E5D9 /* sources */,
+				90A852781FB856630089852C /* ViewController.swift */,
+				90F6065C1FB9D6B300BD5824 /* Extensions.swift */,
+				90A8527A1FB856630089852C /* Main.storyboard */,
+				903DD17D1FBDCB020041E5D9 /* record.png */,
+				90A852821FB856630089852C /* Info.plist */,
+			);
+			path = FaceDataRecorder;
+			sourceTree = "<group>";
+		};
+		90A8528A1FB856630089852C /* FaceDataRecorderTests */ = {
+			isa = PBXGroup;
+			children = (
+				90A8528B1FB856630089852C /* FaceDataRecorderTests.swift */,
+				90A8528D1FB856630089852C /* Info.plist */,
+			);
+			path = FaceDataRecorderTests;
+			sourceTree = "<group>";
+		};
+		90A852951FB856630089852C /* FaceDataRecorderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				90A852961FB856630089852C /* FaceDataRecorderUITests.swift */,
+				90A852981FB856630089852C /* Info.plist */,
+			);
+			path = FaceDataRecorderUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		90A852721FB856630089852C /* FaceDataRecorder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90A8529B1FB856630089852C /* Build configuration list for PBXNativeTarget "FaceDataRecorder" */;
+			buildPhases = (
+				90A8526F1FB856630089852C /* Sources */,
+				90A852701FB856630089852C /* Frameworks */,
+				90A852711FB856630089852C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FaceDataRecorder;
+			productName = FaceDataRecorder;
+			productReference = 90A852731FB856630089852C /* FaceDataRecorder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		90A852861FB856630089852C /* FaceDataRecorderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90A8529E1FB856630089852C /* Build configuration list for PBXNativeTarget "FaceDataRecorderTests" */;
+			buildPhases = (
+				90A852831FB856630089852C /* Sources */,
+				90A852841FB856630089852C /* Frameworks */,
+				90A852851FB856630089852C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				90A852891FB856630089852C /* PBXTargetDependency */,
+			);
+			name = FaceDataRecorderTests;
+			productName = FaceDataRecorderTests;
+			productReference = 90A852871FB856630089852C /* FaceDataRecorderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		90A852911FB856630089852C /* FaceDataRecorderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90A852A11FB856630089852C /* Build configuration list for PBXNativeTarget "FaceDataRecorderUITests" */;
+			buildPhases = (
+				90A8528E1FB856630089852C /* Sources */,
+				90A8528F1FB856630089852C /* Frameworks */,
+				90A852901FB856630089852C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				90A852941FB856630089852C /* PBXTargetDependency */,
+			);
+			name = FaceDataRecorderUITests;
+			productName = FaceDataRecorderUITests;
+			productReference = 90A852921FB856630089852C /* FaceDataRecorderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		90A8526B1FB856630089852C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "洪健淇";
+				TargetAttributes = {
+					90A852721FB856630089852C = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					90A852861FB856630089852C = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 90A852721FB856630089852C;
+					};
+					90A852911FB856630089852C = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 90A852721FB856630089852C;
+					};
+				};
+			};
+			buildConfigurationList = 90A8526E1FB856630089852C /* Build configuration list for PBXProject "FaceDataRecorder" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 90A8526A1FB856630089852C;
+			productRefGroup = 90A852741FB856630089852C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				90A852721FB856630089852C /* FaceDataRecorder */,
+				90A852861FB856630089852C /* FaceDataRecorderTests */,
+				90A852911FB856630089852C /* FaceDataRecorderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		90A852711FB856630089852C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				903DD17E1FBDCB020041E5D9 /* record.png in Resources */,
+				90A852811FB856630089852C /* LaunchScreen.storyboard in Resources */,
+				90A8527E1FB856630089852C /* Assets.xcassets in Resources */,
+				90A8527C1FB856630089852C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90A852851FB856630089852C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90A852901FB856630089852C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		90A8526F1FB856630089852C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90A852791FB856630089852C /* ViewController.swift in Sources */,
+				90F6065D1FB9D6B300BD5824 /* Extensions.swift in Sources */,
+				90A852771FB856630089852C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90A852831FB856630089852C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90A8528C1FB856630089852C /* FaceDataRecorderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90A8528E1FB856630089852C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90A852971FB856630089852C /* FaceDataRecorderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		90A852891FB856630089852C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90A852721FB856630089852C /* FaceDataRecorder */;
+			targetProxy = 90A852881FB856630089852C /* PBXContainerItemProxy */;
+		};
+		90A852941FB856630089852C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90A852721FB856630089852C /* FaceDataRecorder */;
+			targetProxy = 90A852931FB856630089852C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		90A8527A1FB856630089852C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90A8527B1FB856630089852C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		90A8527F1FB856630089852C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90A852801FB856630089852C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		90A852991FB856630089852C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		90A8529A1FB856630089852C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		90A8529C1FB856630089852C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63U5CNPSL5;
+				INFOPLIST_FILE = FaceDataRecorder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eliWorks.faceCaptureX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		90A8529D1FB856630089852C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63U5CNPSL5;
+				INFOPLIST_FILE = FaceDataRecorder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eliWorks.faceCaptureX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		90A8529F1FB856630089852C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63U5CNPSL5;
+				INFOPLIST_FILE = FaceDataRecorderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eliWorks.FaceDataRecorderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FaceDataRecorder.app/FaceDataRecorder";
+			};
+			name = Debug;
+		};
+		90A852A01FB856630089852C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63U5CNPSL5;
+				INFOPLIST_FILE = FaceDataRecorderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eliWorks.FaceDataRecorderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FaceDataRecorder.app/FaceDataRecorder";
+			};
+			name = Release;
+		};
+		90A852A21FB856630089852C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63U5CNPSL5;
+				INFOPLIST_FILE = FaceDataRecorderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eliWorks.FaceDataRecorderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FaceDataRecorder;
+			};
+			name = Debug;
+		};
+		90A852A31FB856630089852C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63U5CNPSL5;
+				INFOPLIST_FILE = FaceDataRecorderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eliWorks.FaceDataRecorderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FaceDataRecorder;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		90A8526E1FB856630089852C /* Build configuration list for PBXProject "FaceDataRecorder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90A852991FB856630089852C /* Debug */,
+				90A8529A1FB856630089852C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90A8529B1FB856630089852C /* Build configuration list for PBXNativeTarget "FaceDataRecorder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90A8529C1FB856630089852C /* Debug */,
+				90A8529D1FB856630089852C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90A8529E1FB856630089852C /* Build configuration list for PBXNativeTarget "FaceDataRecorderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90A8529F1FB856630089852C /* Debug */,
+				90A852A01FB856630089852C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90A852A11FB856630089852C /* Build configuration list for PBXNativeTarget "FaceDataRecorderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90A852A21FB856630089852C /* Debug */,
+				90A852A31FB856630089852C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 90A8526B1FB856630089852C /* Project object */;
+}

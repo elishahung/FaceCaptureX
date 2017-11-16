@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FaceDataRecorder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aRz-NP-YM9">
+                                <rect key="frame" x="0.0" y="44" width="375" height="666.66666666666663"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aRz-NP-YM9" secondAttribute="height" multiplier="9:16" id="Ode-5J-VC1"/>
+                                </constraints>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5Q-p7-l40">
+                                <rect key="frame" x="112.66666666666669" y="560.66666666666663" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="LLu-j5-9rE"/>
+                                    <constraint firstAttribute="width" constant="150" id="i5V-ZE-kAc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="CAPTURE" backgroundImage="record.png"/>
+                                <connections>
+                                    <action selector="pressCaptureButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="et1-ry-2yy"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jJg-rq-ZwF">
+                                <rect key="frame" x="264" y="720.66666666666663" width="51" height="31"/>
+                                <color key="onTintColor" red="1" green="0.77469698799999998" blue="0.19762028540000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="switchCaptureMode:" destination="BYZ-38-t0r" eventType="valueChanged" id="HEL-6o-lMq"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Sj-9Y-YaS">
+                                <rect key="frame" x="333" y="725.33333333333337" width="22" height="22"/>
+                                <color key="tintColor" red="1" green="0.77469698804726628" blue="0.19762028538556187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="settingPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b6l-OO-yE6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stream &gt; 192.168.1.1:3597" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PiP-fk-mIY">
+                                <rect key="frame" x="20" y="726" width="201" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="G5Q-p7-l40" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Fa-kY-N1I"/>
+                            <constraint firstItem="PiP-fk-mIY" firstAttribute="centerY" secondItem="jJg-rq-ZwF" secondAttribute="centerY" id="6vw-md-4bd"/>
+                            <constraint firstItem="jJg-rq-ZwF" firstAttribute="top" secondItem="aRz-NP-YM9" secondAttribute="bottom" constant="10" id="JtD-Tc-XvS"/>
+                            <constraint firstItem="8Sj-9Y-YaS" firstAttribute="leading" secondItem="jJg-rq-ZwF" secondAttribute="trailing" constant="20" id="PwG-S4-Lc1"/>
+                            <constraint firstItem="G5Q-p7-l40" firstAttribute="bottom" secondItem="aRz-NP-YM9" secondAttribute="bottom" id="Wpa-2h-4UV"/>
+                            <constraint firstItem="jJg-rq-ZwF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PiP-fk-mIY" secondAttribute="trailing" priority="50" constant="10" id="ceg-0L-Y7T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Sj-9Y-YaS" secondAttribute="trailing" constant="20" id="fMk-06-6rY"/>
+                            <constraint firstItem="PiP-fk-mIY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hBq-OX-lmu"/>
+                            <constraint firstItem="8Sj-9Y-YaS" firstAttribute="centerY" secondItem="jJg-rq-ZwF" secondAttribute="centerY" id="pia-qB-t74"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aRz-NP-YM9" secondAttribute="trailing" id="tko-Ba-flX"/>
+                            <constraint firstItem="aRz-NP-YM9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vnG-Yn-XYB"/>
+                            <constraint firstItem="aRz-NP-YM9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zL2-Qf-eZj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="captureButton" destination="G5Q-p7-l40" id="tpq-gS-JBh"/>
+                        <outlet property="logText" destination="PiP-fk-mIY" id="iuv-zz-MT4"/>
+                        <outlet property="sceneView" destination="aRz-NP-YM9" id="Z7l-Bo-2tB"/>
+                        <outlet property="settingButton" destination="8Sj-9Y-YaS" id="Dac-Aa-BWR"/>
+                        <outlet property="switchButton" destination="jJg-rq-ZwF" id="bkr-zO-IDv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="116.74876847290641"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="record.png" width="512" height="512"/>
+    </resources>
+</document>
