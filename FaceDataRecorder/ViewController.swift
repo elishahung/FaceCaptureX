@@ -17,7 +17,7 @@ class ViewController: UIViewController, ARSessionDelegate {
     @IBOutlet weak var captureButton: UIButton!
     @IBOutlet weak var switchButton: UISwitch!
     @IBOutlet weak var settingButton: UIButton!
-    @IBOutlet weak var logText: UILabel!    
+    @IBOutlet weak var infoText: UILabel!    
     
     private let ini = UserDefaults.standard
     
@@ -34,14 +34,10 @@ class ViewController: UIViewController, ARSessionDelegate {
     
     var captureMode = CaptureMode.stream {
         didSet {
-            switch captureMode{
-            case .record:
-                logText.text = "Record > \(fps) FPS"
-                if switchButton.isOn { switchButton.isOn = false }
-            case .stream:
-                logText.text = "Stream > \(host):\(port)"
+            if captureMode == .record {
+                 if switchButton.isOn { switchButton.isOn = false }
             }
-            
+            refreshInfo()
             ini.set(captureMode == .record, forKey: "mode")
         }
     }
@@ -57,7 +53,7 @@ class ViewController: UIViewController, ARSessionDelegate {
             ini.set(port, forKey: "port")
         }
     }
-    var stream: OutputStream!
+    var outputStream: OutputStream!
     
     // record's attr
     var fps = 30.0 {
@@ -167,6 +163,15 @@ class ViewController: UIViewController, ARSessionDelegate {
         }
     }
     
+    func refreshInfo() {
+        switch captureMode{
+        case .record:
+            infoText.text = "Record > \(fps) FPS"
+        case .stream:
+            infoText.text = "Stream > \(host):\(port)"
+        }
+    }
+    
     // standard
     func initTracking() {
         guard ARFaceTrackingConfiguration.isSupported else { return }
@@ -177,14 +182,20 @@ class ViewController: UIViewController, ARSessionDelegate {
     
     func startCapture() {
         isCapturing = true
+        refreshInfo()
         
         switch captureMode {
+            
         case .stream:
+            if outputStream != nil {
+                outputStream.close()
+            }
             var out: OutputStream?
             Stream.getStreamsToHost(withName: host, port: port, inputStream: nil, outputStream: &out)
-            stream = out!
-            stream.open()
+            outputStream = out!
+            outputStream.open()
             streamData()
+            
         case .record:
             captureData = []
             currentCaptureFrame = 0
@@ -203,7 +214,10 @@ class ViewController: UIViewController, ARSessionDelegate {
         isCapturing = false
         switch captureMode {
         case .stream:
-            stream.close()
+            let dataStr = "e"
+            let dataBuffer = dataStr.data(using: .utf8)!
+            _ = dataBuffer.withUnsafeBytes { self.outputStream.write($0, maxLength: dataBuffer.count) }
+            outputStream.close()
         case .record:
             fpsTimer.invalidate()
             let fileName = folderPath.appendingPathComponent("faceData.txt")
@@ -215,18 +229,23 @@ class ViewController: UIViewController, ARSessionDelegate {
     }
     
     func streamData() {
+        if outputStream.streamStatus == .error {
+            infoText.text = "Connection Error!"
+            stopCapture()
+            return
+        }
         let arFrame = session.currentFrame!
         guard let anchor = arFrame.anchors[0] as? ARFaceAnchor else {return}
         let vertices = anchor.geometry.vertices
         let data = CaptureData(vertices: vertices, camTransform: arFrame.camera.transform, faceTransform: anchor.transform)
         
-        saveQueue.async {
-            let text = data.str
-            let head = String(format: "%05d", text.count)
-            let buffer = (head+text).data(using: .utf8)!
-            let _ = buffer.withUnsafeBytes { self.stream.write($0, maxLength: buffer.count) }
+        saveQueue.async{
+            autoreleasepool {
+                let dataStr = data.str + "a"
+                let dataBuffer = dataStr.data(using: .utf8)!
+                _ = dataBuffer.withUnsafeBytes { self.outputStream.write($0, maxLength: dataBuffer.count) }
+            }
         }
-      
     }
     
     func recordData() {
@@ -267,6 +286,7 @@ class ViewController: UIViewController, ARSessionDelegate {
         
         let okAction = UIAlertAction(title: "Accept", style: .default, handler: { (action) -> Void in
             self.fps = Double(alert.textFields![0].text!)!
+            self.refreshInfo()
         })
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: {(action) -> Void in})
@@ -294,7 +314,10 @@ class ViewController: UIViewController, ARSessionDelegate {
             if alert.textFields![0].text != "" {
                 self.host = alert.textFields![0].text!
             }
-            self.port = Int(alert.textFields![1].text!)!
+            if alert.textFields![1].text != "" {
+                self.port = Int(alert.textFields![1].text!)!
+            }
+            self.refreshInfo()
         })
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: {(action) -> Void in})

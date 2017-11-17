@@ -77,7 +77,7 @@
                     </view>
                     <connections>
                         <outlet property="captureButton" destination="G5Q-p7-l40" id="tpq-gS-JBh"/>
-                        <outlet property="logText" destination="PiP-fk-mIY" id="iuv-zz-MT4"/>
+                        <outlet property="infoText" destination="PiP-fk-mIY" id="iuv-zz-MT4"/>
                         <outlet property="sceneView" destination="aRz-NP-YM9" id="Z7l-Bo-2tB"/>
                         <outlet property="settingButton" destination="8Sj-9Y-YaS" id="Dac-Aa-BWR"/>
                         <outlet property="switchButton" destination="jJg-rq-ZwF" id="bkr-zO-IDv"/>
