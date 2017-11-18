@@ -17,7 +17,7 @@ class ViewController: UIViewController, ARSessionDelegate {
     @IBOutlet weak var captureButton: UIButton!
     @IBOutlet weak var switchButton: UISwitch!
     @IBOutlet weak var settingButton: UIButton!
-    @IBOutlet weak var infoText: UILabel!    
+    @IBOutlet weak var infoText: UILabel!
     
     private let ini = UserDefaults.standard
     
@@ -114,7 +114,10 @@ class ViewController: UIViewController, ARSessionDelegate {
     
     // delegate
     func session(_ session: ARSession, didFailWithError error: Error) {
-        return
+        stopCapture()
+        DispatchQueue.main.async {
+            self.initTracking()
+        }
     }
     func sessionWasInterrupted(_ session: ARSession) {
         return
@@ -214,15 +217,18 @@ class ViewController: UIViewController, ARSessionDelegate {
         isCapturing = false
         switch captureMode {
         case .stream:
-            let dataStr = "e"
+            let dataStr = "z"
             let dataBuffer = dataStr.data(using: .utf8)!
             _ = dataBuffer.withUnsafeBytes { self.outputStream.write($0, maxLength: dataBuffer.count) }
             outputStream.close()
         case .record:
+            let tmp = infoText.text!
+            infoText.text = "Record > Saving Data..."
             fpsTimer.invalidate()
             let fileName = folderPath.appendingPathComponent("faceData.txt")
             let data = captureData.map{ $0.str }.joined(separator: "\n")
             try? data.write(to: fileName, atomically: false, encoding: String.Encoding.utf8)
+            infoText.text = tmp
         }
         
         captureButton.setTitle("Capture", for: .normal)
@@ -237,7 +243,7 @@ class ViewController: UIViewController, ARSessionDelegate {
         let arFrame = session.currentFrame!
         guard let anchor = arFrame.anchors[0] as? ARFaceAnchor else {return}
         let vertices = anchor.geometry.vertices
-        let data = CaptureData(vertices: vertices, camTransform: arFrame.camera.transform, faceTransform: anchor.transform)
+        let data = CaptureData(vertices: vertices, camTransform: arFrame.camera.transform, faceTransform: anchor.transform, blendShapes: anchor.blendShapes)
         
         saveQueue.async{
             autoreleasepool {
@@ -252,9 +258,8 @@ class ViewController: UIViewController, ARSessionDelegate {
         let arFrame = session.currentFrame!
         guard let anchor = arFrame.anchors[0] as? ARFaceAnchor else {return}
         let vertices = anchor.geometry.vertices
-        let data = CaptureData(vertices: vertices, camTransform: arFrame.camera.transform, faceTransform: anchor.transform)
+        let data = CaptureData(vertices: vertices, camTransform: arFrame.camera.transform, faceTransform: anchor.transform, blendShapes: anchor.blendShapes)
         captureData.append(data)
-        
         let snap = arFrame.capturedImage
         let num = currentCaptureFrame
         saveQueue.async{
