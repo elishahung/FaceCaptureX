@@ -25,7 +25,7 @@ class FaceServer(threading.Thread):
                 end = packet[-1]
                 if end == "a":
                     break
-                elif end == "e":
+                elif end == "z":
                     return None
         return data
 
@@ -49,7 +49,7 @@ class FaceServer(threading.Thread):
             while True:
                 data = self.recvall(ss)
                 if data is None:
-                    print("connection error, standby...")
+                    print("connection missing, wait for connect...")
                     break
 
                 try:
@@ -113,7 +113,6 @@ def startServer():
 def closeServer():
     for s in faceThreads:
         s.close()
-        print("ccccclose")
     
     print "server closed"
     hou.node("/obj/geo/streamServer/").parm("info").set("Server Closed")
