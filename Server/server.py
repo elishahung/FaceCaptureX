@@ -29,7 +29,7 @@ class FaceServer(threading.Thread): # main server to receive iphone's stream
 
     def run(self):
         # socket setting
-        address = ("0", 0)
+        address = (hou.node("/obj/geo/streamServer/").parm("ip").eval(), 0)
         self.sock.bind(address)
         self.sock.listen(5)
 
