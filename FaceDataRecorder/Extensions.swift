@@ -1,19 +1,22 @@
 //
-//  GeoData.swift
+//  Extensions.swift
 //  FaceDataRecorder
 //
-//  Created by 洪健淇 on 2017/11/13.
-//  Copyright © 2017年 洪健淇. All rights reserved.
+//  Created by Elisha Hung on 2017/11/13.
+//  Copyright © 2017 Elisha Hung. All rights reserved.
 //
+//  http://www.elishahung.com/
 
 import SceneKit
 import ARKit
 
+// Capture mode
 enum CaptureMode {
     case record
     case stream
 }
 
+// Every frame's capture data for streaming or save to text file later.
 struct CaptureData {
     var vertices: [float3]
     var camTransform: matrix_float4x4
@@ -31,12 +34,14 @@ struct CaptureData {
     }
 }
 
+// Matrix
 extension simd_float4 {
     var str : String {
         return "\(self.x):\(self.y):\(self.z):\(self.w)"
     }
 }
 
+// Camera's image format is CVPixelBuffer, convert it to cgImage for jpg compression
 extension UIImage {
     convenience init (pixelBuffer: CVPixelBuffer) {
         let ciImage = CIImage(cvImageBuffer: pixelBuffer)

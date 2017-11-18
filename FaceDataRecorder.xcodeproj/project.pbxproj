@@ -13,27 +13,8 @@
 		90A8527C1FB856630089852C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90A8527A1FB856630089852C /* Main.storyboard */; };
 		90A8527E1FB856630089852C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90A8527D1FB856630089852C /* Assets.xcassets */; };
 		90A852811FB856630089852C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90A8527F1FB856630089852C /* LaunchScreen.storyboard */; };
-		90A8528C1FB856630089852C /* FaceDataRecorderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A8528B1FB856630089852C /* FaceDataRecorderTests.swift */; };
-		90A852971FB856630089852C /* FaceDataRecorderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A852961FB856630089852C /* FaceDataRecorderUITests.swift */; };
 		90F6065D1FB9D6B300BD5824 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F6065C1FB9D6B300BD5824 /* Extensions.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		90A852881FB856630089852C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 90A8526B1FB856630089852C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 90A852721FB856630089852C;
-			remoteInfo = FaceDataRecorder;
-		};
-		90A852931FB856630089852C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 90A8526B1FB856630089852C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 90A852721FB856630089852C;
-			remoteInfo = FaceDataRecorder;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		903DD17D1FBDCB020041E5D9 /* record.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = record.png; sourceTree = "<group>"; };
@@ -44,31 +25,11 @@
 		90A8527D1FB856630089852C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90A852801FB856630089852C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90A852821FB856630089852C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		90A852871FB856630089852C /* FaceDataRecorderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceDataRecorderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		90A8528B1FB856630089852C /* FaceDataRecorderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDataRecorderTests.swift; sourceTree = "<group>"; };
-		90A8528D1FB856630089852C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		90A852921FB856630089852C /* FaceDataRecorderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceDataRecorderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		90A852961FB856630089852C /* FaceDataRecorderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDataRecorderUITests.swift; sourceTree = "<group>"; };
-		90A852981FB856630089852C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90F6065C1FB9D6B300BD5824 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		90A852701FB856630089852C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		90A852841FB856630089852C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		90A8528F1FB856630089852C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -92,8 +53,6 @@
 			isa = PBXGroup;
 			children = (
 				90A852751FB856630089852C /* FaceDataRecorder */,
-				90A8528A1FB856630089852C /* FaceDataRecorderTests */,
-				90A852951FB856630089852C /* FaceDataRecorderUITests */,
 				90A852741FB856630089852C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,8 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				90A852731FB856630089852C /* FaceDataRecorder.app */,
-				90A852871FB856630089852C /* FaceDataRecorderTests.xctest */,
-				90A852921FB856630089852C /* FaceDataRecorderUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,24 +76,6 @@
 				90A852821FB856630089852C /* Info.plist */,
 			);
 			path = FaceDataRecorder;
-			sourceTree = "<group>";
-		};
-		90A8528A1FB856630089852C /* FaceDataRecorderTests */ = {
-			isa = PBXGroup;
-			children = (
-				90A8528B1FB856630089852C /* FaceDataRecorderTests.swift */,
-				90A8528D1FB856630089852C /* Info.plist */,
-			);
-			path = FaceDataRecorderTests;
-			sourceTree = "<group>";
-		};
-		90A852951FB856630089852C /* FaceDataRecorderUITests */ = {
-			isa = PBXGroup;
-			children = (
-				90A852961FB856630089852C /* FaceDataRecorderUITests.swift */,
-				90A852981FB856630089852C /* Info.plist */,
-			);
-			path = FaceDataRecorderUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,42 +98,6 @@
 			productReference = 90A852731FB856630089852C /* FaceDataRecorder.app */;
 			productType = "com.apple.product-type.application";
 		};
-		90A852861FB856630089852C /* FaceDataRecorderTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 90A8529E1FB856630089852C /* Build configuration list for PBXNativeTarget "FaceDataRecorderTests" */;
-			buildPhases = (
-				90A852831FB856630089852C /* Sources */,
-				90A852841FB856630089852C /* Frameworks */,
-				90A852851FB856630089852C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				90A852891FB856630089852C /* PBXTargetDependency */,
-			);
-			name = FaceDataRecorderTests;
-			productName = FaceDataRecorderTests;
-			productReference = 90A852871FB856630089852C /* FaceDataRecorderTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		90A852911FB856630089852C /* FaceDataRecorderUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 90A852A11FB856630089852C /* Build configuration list for PBXNativeTarget "FaceDataRecorderUITests" */;
-			buildPhases = (
-				90A8528E1FB856630089852C /* Sources */,
-				90A8528F1FB856630089852C /* Frameworks */,
-				90A852901FB856630089852C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				90A852941FB856630089852C /* PBXTargetDependency */,
-			);
-			name = FaceDataRecorderUITests;
-			productName = FaceDataRecorderUITests;
-			productReference = 90A852921FB856630089852C /* FaceDataRecorderUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -208,16 +111,6 @@
 					90A852721FB856630089852C = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
-					};
-					90A852861FB856630089852C = {
-						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 90A852721FB856630089852C;
-					};
-					90A852911FB856630089852C = {
-						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 90A852721FB856630089852C;
 					};
 				};
 			};
@@ -235,8 +128,6 @@
 			projectRoot = "";
 			targets = (
 				90A852721FB856630089852C /* FaceDataRecorder */,
-				90A852861FB856630089852C /* FaceDataRecorderTests */,
-				90A852911FB856630089852C /* FaceDataRecorderUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -253,20 +144,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		90A852851FB856630089852C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		90A852901FB856630089852C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -280,36 +157,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		90A852831FB856630089852C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				90A8528C1FB856630089852C /* FaceDataRecorderTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		90A8528E1FB856630089852C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				90A852971FB856630089852C /* FaceDataRecorderUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		90A852891FB856630089852C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 90A852721FB856630089852C /* FaceDataRecorder */;
-			targetProxy = 90A852881FB856630089852C /* PBXContainerItemProxy */;
-		};
-		90A852941FB856630089852C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 90A852721FB856630089852C /* FaceDataRecorder */;
-			targetProxy = 90A852931FB856630089852C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		90A8527A1FB856630089852C /* Main.storyboard */ = {
@@ -470,72 +318,6 @@
 			};
 			name = Release;
 		};
-		90A8529F1FB856630089852C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 63U5CNPSL5;
-				INFOPLIST_FILE = FaceDataRecorderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.eliWorks.FaceDataRecorderTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FaceDataRecorder.app/FaceDataRecorder";
-			};
-			name = Debug;
-		};
-		90A852A01FB856630089852C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 63U5CNPSL5;
-				INFOPLIST_FILE = FaceDataRecorderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.eliWorks.FaceDataRecorderTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FaceDataRecorder.app/FaceDataRecorder";
-			};
-			name = Release;
-		};
-		90A852A21FB856630089852C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 63U5CNPSL5;
-				INFOPLIST_FILE = FaceDataRecorderUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.eliWorks.FaceDataRecorderUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FaceDataRecorder;
-			};
-			name = Debug;
-		};
-		90A852A31FB856630089852C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 63U5CNPSL5;
-				INFOPLIST_FILE = FaceDataRecorderUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.eliWorks.FaceDataRecorderUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FaceDataRecorder;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -553,24 +335,6 @@
 			buildConfigurations = (
 				90A8529C1FB856630089852C /* Debug */,
 				90A8529D1FB856630089852C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		90A8529E1FB856630089852C /* Build configuration list for PBXNativeTarget "FaceDataRecorderTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				90A8529F1FB856630089852C /* Debug */,
-				90A852A01FB856630089852C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		90A852A11FB856630089852C /* Build configuration list for PBXNativeTarget "FaceDataRecorderUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				90A852A21FB856630089852C /* Debug */,
-				90A852A31FB856630089852C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

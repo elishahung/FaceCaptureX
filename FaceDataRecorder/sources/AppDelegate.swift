@@ -2,9 +2,10 @@
 //  AppDelegate.swift
 //  FaceDataRecorder
 //
-//  Created by 洪健淇 on 2017/11/12.
-//  Copyright © 2017年 洪健淇. All rights reserved.
+//  Created by Elisha Hung on 2017/11/12.
+//  Copyright © 2017 Elisha Hung. All rights reserved.
 //
+//  http://www.elishahung.com/
 
 import UIKit
 

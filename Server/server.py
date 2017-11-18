@@ -3,9 +3,7 @@ import socket
 import Queue
 from time import time
 
-faceThreads = []
-
-class FaceServer(threading.Thread):
+class FaceServer(threading.Thread): # main server to receive iphone's stream
     def __init__(self, queue):
         self.stop = False
         self.queue = queue
@@ -23,13 +21,14 @@ class FaceServer(threading.Thread):
             data += packet
             if len(packet) > 0:
                 end = packet[-1]
-                if end == "a":
+                if end == "a": # end receiving
                     break
-                elif end == "z":
+                elif end == "z": # iphone stop capture
                     return None
         return data
 
     def run(self):
+        # socket setting
         address = ("0", 0)
         self.sock.bind(address)
         self.sock.listen(5)
@@ -38,26 +37,29 @@ class FaceServer(threading.Thread):
         hou.node("/obj/geo/streamServer/").parm("info").set("Server Created > {}:{}".format(self.sock.getsockname()[0], self.sock.getsockname()[1]))
 
         while self.stop != True:
+            # listen state
             ss, addr = self.sock.accept()
             ss.send("s")
             print "get connected from", addr
 
+            # fps initial
             inter = 0
             fps = 0
             start_time = time()
 
-            while True:
+            while self.stop != True:
                 data = self.recvall(ss)
-                if data is None:
+                if data is None: # back to listen state
                     print("connection missing, wait for connect...")
                     break
 
                 try:
-                    self.queue.get_nowait()
+                    self.queue.get_nowait() # clean queue data
                 except Queue.Empty:
                     pass
-                self.queue.put(data)
+                self.queue.put(data) # put data
 
+                # fps performance print
                 end_time = time()
                 fps += 1
                 inter += end_time - start_time
@@ -72,7 +74,7 @@ class FaceServer(threading.Thread):
         self.stop = True
 
 
-class HouCommander(threading.Thread):
+class HouCommander(threading.Thread): # when there's data, get the data and give it to houdini node's parm
     def __init__(self, queue):
         self.stop = False
         self.queue = queue
@@ -87,8 +89,9 @@ class HouCommander(threading.Thread):
         start_time = time()
 
         while self.stop != True:
-            self.parm.set(self.queue.get())
+            self.parm.set(self.queue.get()) # watch queue, if empty then wait
 
+            # fps performance print
             end_time = time()
             fps += 1
             inter += end_time - start_time
@@ -103,6 +106,7 @@ class HouCommander(threading.Thread):
 
 
 def startServer():
+    global faceThreads
     faceThreads = []
     faceQueue = Queue.Queue(maxsize=1)
     f = FaceServer(faceQueue)
@@ -111,6 +115,7 @@ def startServer():
     h.start()
 
 def closeServer():
+    global faceThreads
     for s in faceThreads:
         s.close()
     
