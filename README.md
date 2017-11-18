@@ -8,4 +8,4 @@ Get iphone X face motion data then import to Houdini.  iPhone X, Houdini **16.5*
 > 
 > http://www.elishahung.com/2017/11/iphone-x-face-tracking-capture-houdini.html
 
-[![Face Capture Demo](https://media.giphy.com/media/xUOxf2izay6vtBY4i4/giphy.gif)](https://vimeo.com/242626624)
+[![](https://media.giphy.com/media/l2QEjUO4VuoXHDwic/giphy.gif)](https://vimeo.com/242626624)
