@@ -2,7 +2,7 @@
 
 > 臉部捕捉詳細說明 For more detail about this git (Chinese) : 
 > 
-> https://www.eli.works/2017/11/iphone-x-face-tracking-capture-houdini.html
+> https://mur.elii.io/iphone-x-face-tracking-capture-houdini
 
 [![](https://media.giphy.com/media/l2QEjUO4VuoXHDwic/giphy.gif)](https://vimeo.com/242626624)
 
